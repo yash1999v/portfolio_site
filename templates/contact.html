@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .contact-details {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-details li {
+            margin: 10px 0;
+        }
+        .contact-details a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skills">Skills</a>
+        <a href="/experience">Experience</a>
+        <a href="/education">Education</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Contact</h2>
+        <p>If you would like to get in touch, please use the following contact details:</p>
+        <ul class="contact-details">
+            <li><strong>Email:</strong> <a href="mailto:yashwanth1999v@gmail.com">yashwanth1999v@gmail.com</a></li>
+            <li><strong>Phone:</strong> +91 6362775708</li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yashwanth-v-profile/" target="_blank">Yashwanth V</a></li>
+            <li><strong>Location:</strong> Bangalore</li>
+        </ul>
+        <a href="/" class="back-link">Go Back</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>

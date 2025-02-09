@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .work-container {
+            padding: 20px;
+        }
+        .work-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .work-item h3 {
+            margin-top: 0;
+        }
+        .work-item p {
+            color: #666;
+        }
+        .work-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .work-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Work</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skills">Skills</a>
+        <a href="/experience">Experience</a>
+        <a href="/education">Education</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <div class="work-container">
+        <h2>Projects</h2>
+        
+        <!-- Project 1 -->
+        <div class="work-item">
+            <h3>Goldman Sachs – Data Analyst | Liquid Assets Management, Derivative Post-trade Lifecycle</h3>
+            <ul>
+                <li><strong>Enhanced Alert Detection:</strong> Integrated anomaly detection methods into Kafka consumers, improving alert precision and responsiveness.</li>
+                <li><strong>ETL Workflow Optimization:</strong> Achieved a 30% reduction in processing time by optimizing ETL workflows, doubling batch load capacity across 5+ reports.</li>
+                <li><strong>Streamlined Reporting:</strong> Performance-tuned 3+ monthly reports, improving efficiency by 40% and enabling faster reporting.</li>
+                <li><strong>Data Visualization:</strong> Created actionable Tableau dashboards to provide enhanced insights and drive better decision-making.</li>
+            </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="work-item">
+            <h3>Goldman Sachs – Technology Analyst | Batch Processing & Trade Flow Processing</h3>
+            <ul>
+                <li><strong>Automated Cleanup:</strong> Reduced 90% of host space utilization with cron job-based automation, optimizing system resources and availability.</li>
+                <li><strong>EOD Batch Automation:</strong> Ensured timely completion of EOD batch processes by implementing robust automation and maintaining SLA adherence.</li>
+                <li><strong>Automation & Monitoring:</strong> Developed Bash scripts to automate job monitoring in Autosys, reducing manual intervention and enhancing reliability.</li>
+                <li><strong>Performance Optimization:</strong> Conducted database performance tuning, improving query performance and optimizing storage.</li>
+                <li><strong>Business Continuity & Disaster Recovery:</strong> Contributed to the development and execution of Business Continuity Plans for smooth transitions during migrations.</li>
+                <li><strong>Data Ingestion & Availability:</strong> Ensured the timely availability of data for analysis post EOD completion by monitoring and optimizing data ingestion processes.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
