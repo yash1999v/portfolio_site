@@ -97,28 +97,20 @@
 </section>
 
 <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center py-6 bg-gray-800 border-t border-gray-700 text-sm text-gray-400">
     <p>&copy; 2025 Yashwanth V. All rights reserved.</p>
     <div class="mt-2">
         👤 You’ve visited this page <span id="local-count">0</span> times.<br />
-        🌍 Total global visits: <span id="global-count">Loading...</span>
+        🌍 Total global visits: 
+        <!-- EasyCounter global visit counter -->
+        <a href="https://www.easycounter.com/">
+            <img src="https://www.easycounter.com/counter.php?yash1999v" border="0" alt="Website Hit Counter">
+        </a>
+        <br><a href="https://www.easycounter.com/">Free Hit Counters</a>
     </div>
 </footer>
 
-<script>
-  // Local visitor counter
-  let visits = localStorage.getItem('visitCount') || 0;
-  visits++;
-  localStorage.setItem('visitCount', visits);
-  document.getElementById('local-count').innerText = visits;
-
-  // Global visitor counter (public tracking)
-  fetch('https://api.countapi.xyz/hit/yash-portfolio.dev/visits')
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('global-count').innerText = data.value;
-    });
-</script>
 
 </body>
 </html>
