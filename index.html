@@ -117,6 +117,13 @@
 
 <!-- ✅ Counter Script -->
 <script src="https://cdn.counter.dev/script.js" data-id="b517ea8a-6227-456b-ace7-f03406c7c728" data-utcoffset="6"></script>
+<script>
+      // Local Visit Count (stored in browser)
+  const localCount = localStorage.getItem('visit-count') || 0;
+  const updatedLocal = parseInt(localCount) + 1;
+  localStorage.setItem('visit-count', updatedLocal);
+  document.getElementById('local-count').textContent = updatedLocal;
+</script>
 
 </body>
 </html>
