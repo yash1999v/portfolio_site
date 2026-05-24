@@ -1,144 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yashwanth V - DevOps Engineer Portfolio</title>
-
-    <!-- ✅ SEO Meta Tags -->
-    <meta name="description" content="Yashwanth V – DevOps Engineer with expertise in AWS, CI/CD, Terraform, and automation. Explore portfolio and projects.">
-    <meta name="keywords" content="DevOps, AWS, Terraform, CI/CD, Portfolio, Yashwanth">
-    <meta name="author" content="Yashwanth V">
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashwanth V | Site Reliability Engineer</title>
+    <meta name="description" content="Portfolio of Yashwanth V, an SRE specializing in AWS, Kubernetes, Terraform, and AI-driven DevOps.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                    },
+                    colors: {
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-800 text-white">
+<body class="bg-gray-900 text-gray-200 font-sans antialiased selection:bg-teal-500/30 selection:text-teal-200">
 
-<!-- ✅ Navbar -->
-<header>
-<nav class="bg-gradient-to-r from-[#1e293b] via-[#334155] to-[#1e293b] shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <span class="text-xl font-bold text-white relative group cursor-pointer">
-                🚀 Yashwanth V | Portfolio
-            </span>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tighter">YV<span class="text-teal-500">.</span></a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-teal-400 transition text-sm font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-teal-400 transition text-sm font-medium">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-teal-400 transition text-sm font-medium">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-teal-400 transition text-sm font-medium">Projects</a>
+                <a href="mailto:yashwanth1999v@gmail.com" class="ml-4 px-4 py-2 bg-teal-500/10 text-teal-400 border border-teal-500/50 rounded hover:bg-teal-500 hover:text-gray-900 transition text-sm font-bold">
+                    Contact Me
+                </a>
+            </div>
         </div>
-        <div class="space-x-6 text-sm font-medium text-white">
-            <a href="#about" class="hover:text-cyan-400 transition duration-300">About</a>
-            <a href="#skills" class="hover:text-cyan-400 transition duration-300">Skills</a>
-            <a href="#projects" class="hover:text-cyan-400 transition duration-300">Projects</a>
-            <a href="#contact" class="hover:text-cyan-400 transition duration-300">Contact</a>
-        </div>
-    </div>
-</nav>
-</header>
+    </nav>
 
-<main>
-
-<!-- ✅ Hero Section -->
-<section id="header" class="bg-gradient-to-r from-[#1e293b] to-[#334155] text-white py-32 pt-24 pb-16">
-    <div class="max-w-5xl mx-auto text-center">
-        <h1 class="text-4xl font-bold leading-tight mb-4">Welcome to My DevOps Portfolio</h1>
-        <p class="text-lg mb-6">Focused on building resilient systems while continuously learning and improving.</p>
-        <a href="#projects" class="bg-cyan-400 text-white py-2 px-6 rounded-full text-xl hover:bg-cyan-500 transition duration-300">Explore My Projects</a>
-    </div>
-</section>
-
-<!-- ✅ About Section -->
-<section id="about" class="py-16 bg-gray-900 text-white pt-24 pb-16">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center mb-8">About Me</h2>
-        <div class="flex flex-col md:flex-row items-center bg-gray-800 p-6 rounded-xl shadow-lg gap-6">
-            <!-- 👇 Ghibli Image -->
-            <img src="assets/images/avatar.png" alt="Yashwanth Ghibli Art" class="w-48 h-48 rounded-full shadow-md border-2 border-cyan-400" />
-            
-            <!-- 👇 About Text -->
-            <p class="text-lg text-center md:text-left">
-                I am a DevOps Engineer with 3 years of experience in managing infrastructure, automation, and cloud solutions. I specialize in AWS, Docker, Terraform, and CI/CD pipeline automation. Passionate about building scalable and efficient systems, I enjoy solving complex challenges and improving system reliability.
+    <!-- Hero Section -->
+    <header id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block mb-4 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-teal-400 text-sm font-medium">
+                Site Reliability Engineer based in India
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Resilient Systems</span><br> & Automating the Future.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Hi, I'm Yashwanth V. I specialize in AWS, Kubernetes, and integrating local AI into DevOps workflows to eliminate toil and enforce reliability.
             </p>
-        </div>
-    </div>
-</section>
-
-
-<!-- ✅ Skills Section -->
-<section id="skills" class="bg-gray-700 py-16 pt-24 pb-16">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center">Skills</h2>
-        <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-lg">
-            <li>AWS</li>
-            <li>Docker</li>
-            <li>Terraform</li>
-            <li>CI/CD</li>
-            <li>Jenkins</li>
-            <li>GitLab</li>
-            <li>Python</li>
-            <li>Prometheus</li>
-        </ul>
-    </div>
-</section>
-
-<!-- ✅ Projects Section -->
-<section id="projects" class="py-16">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center">Projects</h2>
-        <div class="mt-8 space-y-8">
-            <div>
-                <h3 class="text-xl font-semibold underline">AWS Cost Optimization Automation</h3>
-                <p class="mt-2">Automated the process of identifying and deleting unused AWS resources to optimize costs using Lambda and SNS notifications.</p>
-                <a href="https://github.com/yash1999v/Routine30Python/tree/main/CostOptimWithLambdaSNS" class="inline-block mt-2 text-cyan-400">View Project</a>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold underline">Kafka Brute-Force Detection System</h3>
-                <p class="mt-2">Built a system using Kafka for stream processing of failed login attempts to detect brute-force attacks.</p>
-                <a href="https://github.com/yash1999v/brute-force-detection-kafka-python" class="inline-block mt-2 text-cyan-400">View Project</a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-gray-900 font-bold rounded-full transition duration-300 shadow-[0_0_15px_rgba(45,212,191,0.4)]">
+                    View My Work
+                </a>
+                <a href="https://github.com/yash1999v" target="_blank" id="github-hero-link" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-600 font-bold rounded-full transition duration-300 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    GitHub
+                </a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- ✅ Contact Section -->
-<section id="contact" class="bg-gray-700 py-16">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-semibold">Contact</h2>
-        <p class="mt-6 text-lg">
-            Reach out to me via <a href="mailto:yashwanth1999v@gmail.com" class="text-cyan-400">Email</a> or connect with me on <a href="https://www.linkedin.com/in/yashwanth-v-83591a1ba/" class="text-cyan-400">LinkedIn</a>.
-        </p>
-    </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-gray-800/30">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3 flex justify-center">
+                <div class="relative w-56 h-56 md:w-64 md:h-64 rounded-full p-1 bg-gradient-to-tr from-teal-400 to-cyan-500 shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+                    <img src="assets/images/1773043140600.jpg" alt="Yashwanth V" class="w-full h-full object-cover rounded-full border-4 border-gray-900">
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-teal-500 rounded"></span> About Me
+                </h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                    With 3 years of experience managing high-traffic infrastructure and cloud solutions, I believe that true reliability comes from treating infrastructure as code and ruthlessly eliminating human toil through intelligent automation.
+                </p>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    My engineering philosophy is simple: <strong class="text-white font-medium">build systems that heal themselves.</strong> Beyond traditional SRE practices, I am heavily focused on modernizing DevOps by integrating local AI models (like Ollama and DeepSeek) directly into workflows to accelerate incident investigation, log parsing, and Root Cause Analysis.
+                </p>
+            </div>
+        </div>
+    </section>
 
-</main>
+    <!-- Skills Grid Section -->
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 justify-center md:justify-start">
+                <span class="w-8 h-1 bg-cyan-500 rounded"></span> Core Arsenal
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Infrastructure -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-teal-500/50 hover:bg-gray-800/80 transition duration-300 group">
+                    <div class="text-teal-400 mb-4 bg-teal-500/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Cloud & IaC</h3>
+                    <ul class="text-gray-400 text-sm space-y-1.5 font-medium">
+                        <li>Amazon Web Services (AWS)</li>
+                        <li>Terraform</li>
+                        <li>Infrastructure Architecture</li>
+                    </ul>
+                </div>
+                <!-- Containers -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-cyan-500/50 hover:bg-gray-800/80 transition duration-300 group">
+                    <div class="text-cyan-400 mb-4 bg-cyan-500/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Containers</h3>
+                    <ul class="text-gray-400 text-sm space-y-1.5 font-medium">
+                        <li>Kubernetes (EKS)</li>
+                        <li>Docker</li>
+                        <li>Helm & Service Mesh</li>
+                    </ul>
+                </div>
+                <!-- Automation -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-teal-500/50 hover:bg-gray-800/80 transition duration-300 group">
+                    <div class="text-teal-400 mb-4 bg-teal-500/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">CI/CD & Obs</h3>
+                    <ul class="text-gray-400 text-sm space-y-1.5 font-medium">
+                        <li>Jenkins & GitLab CI</li>
+                        <li>Prometheus</li>
+                        <li>Grafana & ELK Stack</li>
+                    </ul>
+                </div>
+                <!-- AI Integration -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-cyan-500/50 hover:bg-gray-800/80 transition duration-300 group">
+                    <div class="text-cyan-400 mb-4 bg-cyan-500/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI & Scripting</h3>
+                    <ul class="text-gray-400 text-sm space-y-1.5 font-medium">
+                        <li>Python Automation</li>
+                        <li>Ollama / DeepSeek</li>
+                        <li>AI-Driven RCA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ✅ Footer -->
-<footer class="text-center py-6 bg-gray-800 border-t border-gray-700 text-sm text-gray-400">
-  <p>&copy; 2025 Yashwanth V. All rights reserved.</p>
-  <div class="mt-2">
-    👤 You’ve visited this page <span id="local-count">0</span> times from this browser.<br />
-    🌍 Global visits tracked via <strong>counter.dev</strong> & HitWebCounter:
-    <br />
-    <a href="https://www.hitwebcounter.com" target="_blank">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=20953427&style=0045&nbdigits=5&type=ip&initCount=0" 
-           title="Web Counter" alt="Visitor counter" style="margin-top: 8px;" />
-    </a>
-  </div>
-</footer>
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 bg-gray-800/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-teal-500 rounded"></span> Professional Experience
+            </h2>
+            <div class="relative border-l-2 border-teal-500/30 pl-8 ml-4 md:ml-0">
+                <div class="absolute w-4 h-4 bg-teal-500 rounded-full -left-[9px] top-1.5 shadow-[0_0_10px_rgba(45,212,191,0.8)]"></div>
+                
+                <div class="mb-2 flex flex-col md:flex-row md:items-center justify-between">
+                    <h3 class="text-2xl font-bold text-white">Site Reliability Engineer</h3>
+                    <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-sm font-mono border border-teal-500/20">Present</span>
+                </div>
+                <h4 class="text-xl text-gray-400 mb-6 font-medium">FloBiz <span class="text-gray-500 text-sm">(myBillBook)</span></h4>
+                
+                <ul class="space-y-4 text-gray-300 list-none">
+                    <li class="relative pl-6">
+                        <span class="absolute left-0 top-2.5 w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+                        Manage and scale highly available microservices infrastructure using Kubernetes (EKS) and AWS, consistently ensuring <strong class="text-white" id="metric-uptime">[Insert uptime metric]</strong> system uptime.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-0 top-2.5 w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+                        Design and maintain robust CI/CD pipelines utilizing Jenkins and GitLab, accelerating deployment velocity by <strong class="text-white" id="metric-velocity">[Insert speed metric]</strong> while maintaining strict quality gates.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-0 top-2.5 w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+                        Implement comprehensive observability stacks via Prometheus and Grafana to proactively detect anomalies, reducing Mean Time To Detect (MTTD) by <strong class="text-white" id="metric-mttd">[Insert MTTD metric]</strong>.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-0 top-2.5 w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+                        Drive organizational FinOps initiatives resulting in a reduction of AWS cloud expenditures by <strong class="text-white" id="metric-cost">[Insert cost reduction metric]</strong> through right-sizing, auto-scaling, and resource lifecycle automation.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-0 top-2.5 w-1.5 h-1.5 bg-teal-500 rounded-full shadow-[0_0_8px_rgba(45,212,191,0.8)]"></span>
+                        <strong class="text-teal-400">Innovation Focus:</strong> Pioneer the integration of local AI tools (Ollama) into operational runbooks to parse complex logs and automate Root Cause Analysis, saving hours of manual diagnostic toil.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<!-- ✅ Global counter.dev script -->
-<script src="https://cdn.counter.dev/script.js"
-        data-id="b517ea8a-6227-456b-ace7-f03406c7c728"
-        data-utcoffset="6"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 justify-center">
+                <span class="w-8 h-1 bg-cyan-500 rounded"></span> Featured Projects
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Antigravity -->
+                <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-lg hover:shadow-teal-500/10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center border-b border-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-400 to-transparent"></div>
+                        <svg class="w-16 h-16 text-teal-400 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2 py-1 text-xs font-semibold bg-teal-500/10 text-teal-400 rounded border border-teal-500/20">AI / LLM</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-blue-500/10 text-blue-400 rounded border border-blue-500/20">Kubernetes</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Antigravity</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
+                            A specialized local AI-powered incident analysis tool for Kubernetes. It parses raw cluster events and logs, piping them into DeepSeek/Ollama to generate immediate, context-aware Root Cause Analysis for operational teams.
+                        </p>
+                        <a href="[INSERT_ANTIGRAVITY_LINK]" target="_blank" class="text-teal-400 hover:text-teal-300 font-bold text-sm flex items-center gap-1 w-max">
+                            View Repository 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
 
-<!-- ✅ Local counter script -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const localCount = localStorage.getItem('visit-count') || 0;
-    const updatedLocal = parseInt(localCount) + 1;
-    localStorage.setItem('visit-count', updatedLocal);
-    document.getElementById('local-count').textContent = updatedLocal;
-  });
-</script>
+                <!-- Project 2: AWS Cost Optimization -->
+                <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-lg hover:shadow-cyan-500/10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-bl from-gray-700 to-gray-900 flex items-center justify-center border-b border-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-400 to-transparent"></div>
+                        <svg class="w-16 h-16 text-cyan-400 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2 py-1 text-xs font-semibold bg-orange-500/10 text-orange-400 rounded border border-orange-500/20">AWS Lambda</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-green-500/10 text-green-400 rounded border border-green-500/20">FinOps</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">AWS Cost Optimization</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
+                            An event-driven automation framework leveraging AWS Lambda and SNS to automatically detect and terminate unused or orphaned cloud resources (EBS volumes, idle instances), effectively reducing cloud waste.
+                        </p>
+                        <a href="[INSERT_AWS_OPT_LINK]" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-bold text-sm flex items-center gap-1 w-max">
+                            View Architecture 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
 
+                <!-- Project 3: Kafka Brute-Force -->
+                <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-lg hover:shadow-teal-500/10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-t from-gray-700 to-gray-900 flex items-center justify-center border-b border-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-400 to-transparent"></div>
+                        <svg class="w-16 h-16 text-teal-400 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2 py-1 text-xs font-semibold bg-purple-500/10 text-purple-400 rounded border border-purple-500/20">Kafka</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-yellow-500/10 text-yellow-400 rounded border border-yellow-500/20">Python</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Brute-Force Detection</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
+                            A high-throughput stream processing pipeline built with Apache Kafka and Python. It analyzes authentication streams in real-time to rapidly identify and alert on potential distributed brute-force login attacks.
+                        </p>
+                        <a href="[INSERT_KAFKA_LINK]" target="_blank" class="text-teal-400 hover:text-teal-300 font-bold text-sm flex items-center gap-1 w-max">
+                            View Repository 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-10 px-6 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-gray-500 text-sm font-medium">
+                    &copy; 2026 Yashwanth V. All rights reserved. <br/> 
+                    <span class="text-gray-600 italic">Built for scale, engineered for reliability.</span>
+                </p>
+            </div>
+            <div class="flex items-center gap-6">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/yash1999v" target="_blank" id="github-footer-link" class="text-gray-400 hover:text-teal-400 transition duration-300">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/yashwanth-v-83591a1ba/" target="_blank" id="linkedin-footer-link" class="text-gray-400 hover:text-cyan-400 transition duration-300">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                </a>
+                <!-- Email Icon -->
+                <a href="mailto:yashwanth1999v@gmail.com" class="text-gray-400 hover:text-teal-400 transition duration-300">
+                    <span class="sr-only">Email</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
